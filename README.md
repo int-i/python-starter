@@ -20,6 +20,8 @@ See [python.yml](./.github/workflows/python.yml)
 
 Check `pytest --cov=package_name --cov-report=xml` in line 81, and fix it to your package name.
 
+Implemented Jobs:
+
 - Lint with [Flake8](https://flake8.pycqa.org/)
 - Test with [pytest](https://docs.pytest.org/)
 - Code Coverage with [pytest-cov](http://pytest-cov.rtfd.org/) and [Codecov](http://codecov.io/)
@@ -46,7 +48,7 @@ GitHub Workflow Status:
 [![GitHub Workflow](https://img.shields.io/github/workflow/status/author_name/package_name/Python?logo=github&logoColor=white&style=for-the-badge)](https://github.com/author_name/package_name/actions)
 ```
 
-Code Coverage:
+Code Coverage with [Codecov](http://codecov.io/):
 
 ```markdown
 [![Codecov](https://img.shields.io/codecov/c/gh/author_name/package_name?logo=codecov&logoColor=white&style=for-the-badge)](https://codecov.io/gh/author_name/package_name)
@@ -64,6 +66,28 @@ Package License:
 [![License](https://img.shields.io/pypi/l/package_name?style=for-the-badge)](./LICENSE)
 ```
 
+## Test
+
+### Run [pytest](https://docs.pytest.org/)
+
+```bash
+$ pytest
+```
+
+### Code Coverage with [pytest-cov](http://pytest-cov.rtfd.org/)
+
+```bash
+$ pytest --cov=package_name
+```
+
+If you need the output in html format:
+
+```bash
+$ pytest --cov=package_name --cov-report=html
+```
+
+See [pytest-cov Reporting](https://pytest-cov.readthedocs.io/en/latest/reporting.html)
+
 ## Deploy
 
 ### Create `requirements.txt`
@@ -72,7 +96,7 @@ Package License:
 pip freeze > requirements.txt
 ```
 
-### Set License
+### Fix `LICENSE`
 
 Delete the original [LICENSE](./LICENSE) file or change it to your license file.
 
